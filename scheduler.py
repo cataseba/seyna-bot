@@ -38,3 +38,9 @@ def main():
                 break
 
             print(f"⏱ Esperando {TIEMPO_ENTRE_PUBLICACIONES} segundos hasta la siguiente publicación...")
+            time.sleep(TIEMPO_ENTRE_PUBLICACIONES)
+
+    print("✅ Se completaron las publicaciones del día.")
+
+if __name__ == "__main__":
+    main()
