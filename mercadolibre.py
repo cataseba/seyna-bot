@@ -22,4 +22,11 @@ def obtener_publicaciones_activas():
 
 
 def obtener_detalle_item(item_id):
-    url = f"https://api.mercadol
+    url = f"https://api.mercadolibre.com/items/{item_id}"
+
+    headers = {
+        "Authorization": f"Bearer {ACCESS_TOKEN}"
+    }
+
+    response = requests.get(url, headers=headers)
+    return response.json()
